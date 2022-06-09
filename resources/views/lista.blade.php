@@ -7,11 +7,11 @@
     <title>Document</title>
 </head>
 <body>
+    <h2>Lista:</h2>
     <ul>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
+        @foreach ($lista_alimenti as $nome_alimento)
+           <li>{{ $nome_alimento }}</li>
+        @endforeach
     </ul>
 <a href="{{route('home')}}">torna alla home</a>
 </body>

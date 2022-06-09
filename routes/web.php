@@ -19,6 +19,15 @@ Route::get('/', function () {
 
 
 Route::get('/lista', function () {
-    
-    return view('lista');
+    $data = [
+        'nome' =>'alimento',
+        'lista_alimenti' =>[
+            'pane',
+            'pasta',
+            'latte',
+            'farina',
+            'acqua',
+        ]
+        ];
+    return view('lista',$data);
 })->name('lista');
